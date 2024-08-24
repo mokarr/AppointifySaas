@@ -135,6 +135,9 @@
     "vitest": "^2.0.4",
     "vitest-fail-on-console": "^0.7.0"
   },
+  "resolutions": {
+    "terser": "3.14.1"
+  },
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
