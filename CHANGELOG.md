@@ -1,3 +1,32 @@
+# 1.0.0 (2024-08-24)
+
+
+### Bug Fixes
+
+* redirect user to the landing page after signing out ([6e9f383](https://github.com/mokarr/AppointifySaas/commit/6e9f3839daaab56dd3cf3e57287ea0f3862b8588))
+
+
+### Features
+
+* add custom framework for i18n-ally and replace deprecated Jest VSCode configuration ([a9889dc](https://github.com/mokarr/AppointifySaas/commit/a9889dc129aeeba8801f4f47e54d46e9515e6a29))
+* add link to the GitHub repository ([ed42176](https://github.com/mokarr/AppointifySaas/commit/ed42176bdc2776cacc2c939bac45914a1ede8e51))
+* create dashboard header component ([f3dc1da](https://github.com/mokarr/AppointifySaas/commit/f3dc1da451ab8dce90d111fe4bbc8d4bc99e4b01))
+* database connection ([d840854](https://github.com/mokarr/AppointifySaas/commit/d840854cb4f61319bf4e64567ea9d7fca682f826))
+* don't redirect to organization-selection if the user is already on this page ([87da997](https://github.com/mokarr/AppointifySaas/commit/87da997b853fd9dcb7992107d2cb206817258910))
+* initial commit ([d58e1d9](https://github.com/mokarr/AppointifySaas/commit/d58e1d97e11baa0a756bd038332eb84daf5a8327))
+* launching SaaS boilerplate for helping developers to build SaaS quickly ([7f24661](https://github.com/mokarr/AppointifySaas/commit/7f246618791e3a731347dffc694a52fa90b1152a))
+* make the landing page responsive and works on mobile ([27e908a](https://github.com/mokarr/AppointifySaas/commit/27e908a735ea13845a6cc42acc12e6cae3232b9b))
+* make user dashboard responsive ([f88c9dd](https://github.com/mokarr/AppointifySaas/commit/f88c9dd5ac51339d37d1d010e5b16c7776c73b8d))
+* migreate Env.mjs file to Env.ts ([2e6ff12](https://github.com/mokarr/AppointifySaas/commit/2e6ff124dcc10a3c12cac672cbb82ec4000dc60c))
+* remove next-sitemap and use the native Next.js sitemap/robots.txt ([75c9751](https://github.com/mokarr/AppointifySaas/commit/75c9751d607b8a6a269d08667f7d9900797ff38a))
+* sentry keys ([a0e5a7b](https://github.com/mokarr/AppointifySaas/commit/a0e5a7b6d33301022646740752a3d0dfddd9acbb))
+* terser ([8e83cfd](https://github.com/mokarr/AppointifySaas/commit/8e83cfd8cd14ec77f465660c718c3a90a0cb78f2))
+* update to Drizzle Kit 0.22, Storybook 8, migrate to vitest ([c2f19cd](https://github.com/mokarr/AppointifySaas/commit/c2f19cd8e9dc983e0ad799da2474610b57b88f50))
+* update to Next.js Boilerpalte v3.54 ([ae80843](https://github.com/mokarr/AppointifySaas/commit/ae808433e50d6889559fff382d4b9c595d34e04f))
+* upgrade to Clerk v5 and use Clerk's Core 2 ([a92cef0](https://github.com/mokarr/AppointifySaas/commit/a92cef026b5c85a703f707aabf42d28a16f07054))
+* use Node.js version 20 and 22 in GitHub Actions ([226b5e9](https://github.com/mokarr/AppointifySaas/commit/226b5e970f46bfcd384ca60cd63ebb15516eca21))
+* vscode jest open test result view on test fails and add unauthenticatedUrl in clerk middleware ([3cfcb6b](https://github.com/mokarr/AppointifySaas/commit/3cfcb6b00d91dabcb00cbf8eb2d8be6533ff672e))
+
 # [1.6.0](https://github.com/ixartz/SaaS-Boilerplate/compare/v1.5.0...v1.6.0) (2024-07-26)
 
 
