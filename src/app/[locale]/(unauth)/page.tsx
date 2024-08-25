@@ -26,7 +26,6 @@ export default function IndexPage(props: { params: { locale: string } }) {
 
   return (
     <>
-      <p>hello</p>
       <Navbar />
       <Hero />
       <Sponsors />
