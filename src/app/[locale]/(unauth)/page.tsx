@@ -1,8 +1,10 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
+import { FAQ } from '@/templates/FAQ';
 import { Features } from '@/templates/Features';
 import { Hero } from '@/templates/Hero';
 import { Navbar } from '@/templates/Navbar';
+import { Pricing } from '@/templates/Pricing';
 import { Sponsors } from '@/templates/Sponsors';
 
 export async function generateMetadata(props: { params: { locale: string } }) {
@@ -27,9 +29,9 @@ export default function IndexPage(props: { params: { locale: string } }) {
       <Hero />
       <Sponsors />
       <Features />
-      {/* <Pricing />
+      <Pricing />
       <FAQ />
-      <CTA />
+      {/* <CTA />
       <Footer /> */}
     </>
   );
