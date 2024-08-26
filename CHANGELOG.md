@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mokarr/AppointifySaas/compare/v1.0.0...v1.1.0) (2024-08-26)
+
+
+### Features
+
+* copyright sign and france delete ([4f11343](https://github.com/mokarr/AppointifySaas/commit/4f1134309f7b26ea7c1799ef2e262e348392de6f))
+
 # 1.0.0 (2024-08-24)
 
 
