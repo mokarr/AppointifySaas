@@ -1,6 +1,7 @@
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 
+import { getOrganization } from '@/actions/organizationAction';
 import { stripe } from '@/libs/stripe';
 import { absoluteUrl } from '@/utils/absoluteUrl';
 
@@ -16,9 +17,17 @@ export async function GET() {
     }
 
     // look if there is a existing organization
-    // const userSubscription = await
+    const organization = await getOrganization(userId);
 
-    // If not existing make new
+    if (organization && organization.stripeCustomerId) {
+      const stripeSession = await stripe.billingPortal.sessions.create({
+        customer: organization.stripeCustomerId,
+        return_url: settingsUrl,
+      });
+      return new NextResponse(JSON.stringify({ url: stripeSession.url }));
+    }
+
+    // New subscription
 
     const email = user.emailAddresses?.[0]?.emailAddress;
 

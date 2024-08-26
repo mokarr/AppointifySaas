@@ -1,11 +1,23 @@
 'use server';
 
+import { eq } from 'drizzle-orm';
+
 import { db } from '@/libs/DB';
 import { organizationSchema } from '@/models/Schema';
 
-export const getData = async () => {
+export const getOrganizations = async () => {
   const data = await db.select().from(organizationSchema);
   return data;
+};
+
+export const getOrganization = async (userId: string) => {
+  const data = await db
+    .select()
+    .from(organizationSchema)
+    .where(eq(organizationSchema.id, userId))
+    .limit(1); // Fetch only one record since we're checking for existence
+
+  return data.length > 0 ? data[0] : null; // Return the organization if found, otherwise return null
 };
 
 export const addOrganization = async (
