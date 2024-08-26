@@ -10,7 +10,7 @@ import {
 export const organizationSchema = pgTable(
   'organization',
   {
-    id: text('id').primaryKey(),
+    id: text('id').primaryKey(), // maybe uid and a extra clerk id
     stripeCustomerId: text('stripe_customer_id'),
     stripeSubscriptionId: text('stripe_subscription_id'),
     stripeSubscriptionPriceId: text('stripe_subscription_price_id'),
