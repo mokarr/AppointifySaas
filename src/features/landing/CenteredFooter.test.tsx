@@ -16,7 +16,8 @@ describe('CenteredFooter', () => {
         </NextIntlClientProvider>,
       );
 
-      const copyright = screen.getByText(/© Copyright/);
+      const copyright = screen.getByText(/Copyright/);
+      // const copyright = screen.getByText(/© Copyright/); Deleted copyright sign because terser errors on non ASCCII Characters
 
       expect(copyright).toBeInTheDocument();
     });
