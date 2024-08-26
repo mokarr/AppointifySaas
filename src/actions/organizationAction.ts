@@ -20,14 +20,21 @@ export const getOrganization = async (userId: string) => {
   return data.length > 0 ? data[0] : null; // Return the organization if found, otherwise return null
 };
 
-export const addOrganization = async (
-  id: string,
-  stripeCustomerId: string,
-  stripeSubscriptionId: string,
-  stripeSubscriptionPriceId: string,
-  stripeSubscriptionStatus: string,
-  stripeSubscriptionCurrentPeriodEnd: number,
-) => {
+export const addOrganization = async ({
+  id,
+  stripeCustomerId,
+  stripeSubscriptionId,
+  stripeSubscriptionPriceId,
+  stripeSubscriptionStatus,
+  stripeSubscriptionCurrentPeriodEnd,
+}: {
+  id: string;
+  stripeCustomerId: string;
+  stripeSubscriptionId: string;
+  stripeSubscriptionPriceId: string;
+  stripeSubscriptionStatus: string;
+  stripeSubscriptionCurrentPeriodEnd: number;
+}) => {
   await db.insert(organizationSchema).values({
     id,
     stripeCustomerId,
@@ -38,6 +45,20 @@ export const addOrganization = async (
   });
 };
 
+export const updateOrganization = async ({
+  stripeSubscriptionId,
+  stripeSubscriptionCurrentPeriodEnd,
+}: {
+  stripeSubscriptionId: string;
+  stripeSubscriptionCurrentPeriodEnd: number;
+}) => {
+  await db
+    .update(organizationSchema)
+    .set({
+      stripeSubscriptionCurrentPeriodEnd,
+    })
+    .where(eq(organizationSchema.stripeSubscriptionId, stripeSubscriptionId));
+};
 // export const deleteTodo = async (id: number) => {
 //   await db.delete(organizationSchema).where(eq(organizationSchema.id, id));
 
